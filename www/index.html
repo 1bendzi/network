@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<script src="js/pgb.js"></script>
+		<script src="cordova.js"></script>
+		<script>
+            function updateOnlineStatus() {
+                document.getElementById("status").innerHTML = "User is online";
+            }
+
+            function updateOfflineStatus() {
+                document.getElementById("status").innerHTML = "User is offline";
+            }
+
+            window.addEventListener('online', updateOnlineStatus);
+            window.addEventListener('offline', updateOfflineStatus); 
+ 
+        </script> 
+	</head>
+	<body onload="init()">
+		<div id="status">User is online</div>
+		<h1>Hello World!</h1>
+		<p id="dp"></p>
+		<input type="button" onclick="deviceInfo()" value="Let me introduce myself!">
+		<input type="button" onclick="personalData()" value="click!">
+	</body>
+</html>
